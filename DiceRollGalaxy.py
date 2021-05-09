@@ -13,11 +13,7 @@ from Random import Random
 
 # main function for die roll Python code
 if __name__ == "__main__":
-    # if the user includes the flag -h or --help print the options
-    #use either default (for H0.txt) or p1a_3 & p1b_3 (for H1.txt)
-    #p1a_3 represents probability of rolling face-3 for unfair die one
-    #p1b_3 represents probability of rolling face-3 for unfair die two
-    #enter fractions for both
+
     if '-h' in sys.argv or '--help' in sys.argv:
         print ("Usage: %s [-seed number] [-Nroll number] [-Nexp number] [-outputH0 filename] [-outputH1 filename]" % sys.argv[0])
         print

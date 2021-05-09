@@ -139,10 +139,12 @@ if __name__ == "__main__":
     
     LogLikeRatio1_sorted = np.sort(LogLikeRatio1)
     LLR1_below_lamb = np.where(LogLikeRatio1_sorted < critical_lambda)
-    beta = np.max(LLR1_below_lamb[0])/len(LogLikeRatio1)
-    
-    print('beta:',np.max(LLR1_below_lamb[0])/len(LogLikeRatio1))
-    
+    try:
+        beta = np.max(LLR1_below_lamb[0])/len(LogLikeRatio1)
+        print('beta:',np.max(LLR1_below_lamb[0])/len(LogLikeRatio1))
+    except:
+        beta = LLR1_below_lamb[0]/len(LogLikeRatio1)
+        print('beta:',LLR1_below_lamb[0]/len(LogLikeRatio1))
     
 #note --> find beta values for various types of Nexp and Nmeas, compare and contrast in paper
                 
